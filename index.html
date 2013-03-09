@@ -1,12 +1,25 @@
 <html>
 <head>
 
-<title>Redirection en htm</title>
+<script type="text/javascript">
+function writediv(texte)
+     {document.getElementById('total').innerHTML = texte;}
 
-<meta http-equiv="refresh" content="3; URL=index.php">
+function file(fichier)
+     {
+if(window.ActiveXObject) // IE
+          xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
+     else
+
+xhr_object = new XMLHttpRequest();
+     xhr_object.open("GET", fichier, false);
+     xhr_object.send(null);
+     if(xhr_object.readyState == 4) return(xhr_object.responseText);
+     else return(false);
+     }
 </head>
 
-<body>
+<body onload="writediv(file('http://www.distriweb.mobi/metro/paris/mobile/index.php'))">
 </body>
 
 </html> 
