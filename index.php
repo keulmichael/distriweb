@@ -8,7 +8,7 @@ var tournee = document.getElementById("tournee").value;location.href = "index.ph
 </script>
      
 <?php
-include "07655lj/connexion_mobile.php";
+include "http://www.distriweb.mobi/metro/paris/mobile/07655lj/connexion_mobile.php";
 
 $date_heure = date("d/m/Y H:i");$heure = date("H:i");$heure_perm=explode(":",$heure);
 
