@@ -24,6 +24,9 @@ var tournee = document.getElementById("tournee").value;writediv(file("http://www
 function voir_tournee() {
 var tournee = document.getElementById("tournee").value;writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php?t_choix=" + tournee + "&action=voir"));}
 
+function voir_point(num,tournee) {
+writediv(file("mobile_record_point.php?num=" + num + "&tournee=" + tournee));}
+
 </script>
 </head>
 
