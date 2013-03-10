@@ -1,0 +1,38 @@
+body{
+font-family: arial;
+font-size: 8 ;
+}
+
+a {
+text-decoration:none;
+}
+
+table{
+width:100% ;
+border:0 ;
+}
+
+.titre {
+font-family: arial;
+font-size: 8 ;
+color:white;
+font-weight: bold ;
+background-color:green;
+text-decoration:none;
+}
+
+.point1 {
+font-family: arial;
+font-size: 8 ;
+background-color:#CCFF66;
+text-decoration:none;
+}
+
+.point2 {
+font-family: arial;
+font-size: 8 ;
+background-color:white;
+text-decoration:none;
+}
+
+
