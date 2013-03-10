@@ -19,9 +19,10 @@ xhr_object = new XMLHttpRequest();
      }
 
 function rechargerPage() {
-var tournee = document.getElementById("tournee").value;location.href = "index.php?t_choix=" + tournee + "&action=commencer&envoi=email";}
+var tournee = document.getElementById("tournee").value;writediv(file("index.php?t_choix=" + tournee + "&action=commencer&envoi=email"));}
+
 function voir_tournee() {
-var tournee = document.getElementById("tournee").value;location.href = "index.php?t_choix=" + tournee + "&action=voir";}
+var tournee = document.getElementById("tournee").value;writediv(file("index.php?t_choix=" + tournee + "&action=voir"));}
 
 </script>
 </head>
