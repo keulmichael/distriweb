@@ -22,9 +22,8 @@ Michael Host
 <gap:platform name="blackberry" project="widgets"/>
 </gap:platforms>
 
-<icon src="moi.png" gap:role="default" />
+<icon src="moi.png" />
 
-    <gap:splash src="moi.png" />
 
 <feature name="http://api.phonegap.com/1.0/battery"/>
 <feature name="http://api.phonegap.com/1.0/camera"/>
