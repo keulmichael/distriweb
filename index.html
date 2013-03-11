@@ -28,6 +28,14 @@ function voir_point(num,tournee) {
 writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?num=" + num + "&tournee=" + tournee));}
 
 </script>
+
+        <script src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css"> 
+        <link rel="stylesheet" href="css/camera.css" type="text/css">
 </head>
 
 <body onload="writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php'))">
@@ -35,4 +43,11 @@ writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_reco
 
 <div id='total'></div>
 
+<div data-role="content">
+                <a href="#" data-role="button" id="open_camera_button">Capture a photo with camera</a>
+                <a href="#" data-role="button" id="open_lib_button">Open Photo Library</a>
+                <a href="#" data-role="button" id="open_alb_button">Open saved photo album</a>
+                
+                <div id="settings_info" class="ui-body ui-body-b info"></div>
+</div>
 </html> 

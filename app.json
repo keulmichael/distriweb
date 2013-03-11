@@ -1,0 +1,9 @@
+{
+	"reponame":"sample-phonegap-camera",
+	"caption":"PhoneGap Camera",
+	"tooltip":"Capture a photo using the device camera and edit (zoom and crop) the picture.",
+	"description":"Capture photos with the device camera and retrieve photos from a saved photo album using the PhoneGap Camera API. Demonstrates the variety of configurations with which photos can be captured. Uses jQuery and jQuery Mobile.",
+	"articleurl":"http://software.intel.com/en-us/articles/phonegap-camera-api-capture-a-photo-using-a-device-camera-and-edit-zoom-and-crop-the",
+	"categories":["PhoneGap"],
+	"visible": "true"
+}
