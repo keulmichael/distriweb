@@ -38,12 +38,13 @@ writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_reco
         <link rel="stylesheet" href="css/camera.css" type="text/css">
 </head>
 
-<body onload="writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php'));">
+<body onload="writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php'));onLoad()">
 </body>
 
 <div id='total'></div>
 
-<div data-role="page" id="home_page" data-theme="a">
+
+
 <div data-role="content">
                 <a href="#" data-role="button" id="open_camera_button">Capture a photo with camera</a>
                 <a href="#" data-role="button" id="open_lib_button">Open Photo Library</a>
@@ -51,5 +52,5 @@ writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_reco
                 
                 <div id="settings_info" class="ui-body ui-body-b info"></div>
 </div>
-</div>
+
 </html> 
