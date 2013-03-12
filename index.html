@@ -34,11 +34,11 @@ function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/
 function refuser(num) {writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_refuser_point_confirm.php?num=' + num + '&t_choix=' + T + '&site=' + Site));}
 
 function record_ok(num){
-var types = document.getElementById(num."Types").value;
-var Quantite_prevue = document.getElementById(num."quantite_reelle").value;
-var Site = document.getElementById(num."Site").value;
-var T = document.getElementById(num."T").value;
-var retours = document.getElementById(num."quantite_retours").value;
+var types = document.getElementById("Types").value;
+var Quantite_prevue = document.getElementById("quantite_reelle").value;
+var Site = document.getElementById("Site").value;
+var T = document.getElementById("T").value;
+var retours = document.getElementById("quantite_retours").value;
 
 writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point_ok.php?num=' + num + '&Types=' + Types + '&Quantite_prevue=' + Quantite_prevue + '&t_choix=' + T + '&site=' + Site + '&retours=' + retours));}
 
