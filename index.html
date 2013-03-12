@@ -27,6 +27,41 @@ var tournee = document.getElementById("tournee").value;writediv(file("http://www
 function voir_point(num,tournee) {
 writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?num=" + num + "&tournee=" + tournee));}
 
+function record_ok(num,Types,Quantite_prevue,T,Site,retours){
+var types = document.getElementById(num."Types").value;
+var Quantite_prevue = document.getElementById(num."quantite_reelle").value;
+var Site = document.getElementById(num."Site").value;
+var T = document.getElementById(num."T").value;
+var retours = document.getElementById(num."quantite_retours").value;
+
+writediv(file('mobile_record_point_ok.php?num=' + num + '&Types=' + Types + '&Quantite_prevue=' + Quantite_prevue + '&t_choix=' + T +&'site=' + Site + '&retours=' + retours));};
+
+function affich_photo(num){writediv(file('affich_photo.php?num=' + num))};
+	
+function refuser(num) {writediv(file('mobile_refuser_point_confirm.php?num=' + num + '&t_choix=' + T + '&site=' + Site))};
+
+function mobile_modif_donnees_reelle(num){
+var site = document.getElementById(num."site").value;
+var types = document.getElementById(num."Types").value;
+if (types!='GDR'){var quantite_reelle = document.getElementById(num."quantite_reelle").value;}
+if (types=='GD'){var presenceGD = document.getElementById(num."presenceGD").value;}
+var quantite_retours = document.getElementById(num."quantite_retours").value;
+var horaire_debut = document.getElementById(num."horaire_debut").value;
+
+if (quantite_reelle==0 && types!='PRINT'){
+writediv(file('mobile_refuser_point_confirm.php?t_choix=$T&num='+num));
+} 
+
+else { 
+if (navigator.geolocation && types=='SNCF' || navigator.geolocation && types=='Vinci' || navigator.geolocation && types=='PRINT'){
+navigator.geolocation.getCurrentPosition(function(position) { 
+file('mobile_modif_donnees_reelle.php?num='+num+'&site='+site+'&Types='+types+'&nouvelle_quantite_reelle='+quantite_reelle+'&nouvelle_quantite_retours='+quantite_retours+'&nouvelle_horaire_debut='+horaire_debut+'&nouvelle_horaire_debut='+horaire_debut+'&PDA_Latitude='+position.coords.latitude+'&PDA_Longitude='+position.coords.longitude+'&presenceGD='+presenceGD),{maximumAge:0, timeout:0}})
+}
+
+else{
+file('mobile_modif_donnees_reelle.php?num='+num+'&site='+site+'&Types='+types+'&nouvelle_quantite_reelle='+quantite_reelle+'&nouvelle_quantite_retours='+quantite_retours+'&nouvelle_horaire_debut='+horaire_debut+'&nouvelle_horaire_debut='+horaire_debut+'&PDA_Latitude=&PDA_Longitude=&presenceGD='+presenceGD);
+}
+
 </script>
 
         <script src="cordova.js"></script>
