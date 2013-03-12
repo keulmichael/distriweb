@@ -33,7 +33,7 @@ function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/
 	
 function refuser(num) {writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_refuser_point_confirm.php?num=' + num + '&t_choix=' + T + '&site=' + Site));}
 
-function record_ok(num,Types,Quantite_prevue,T,Site,retours){
+function record_ok(num){
 var types = document.getElementById(num."Types").value;
 var Quantite_prevue = document.getElementById(num."quantite_reelle").value;
 var Site = document.getElementById(num."Site").value;
