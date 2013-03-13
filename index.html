@@ -30,8 +30,12 @@ writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_reco
 
 
 function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/affich_photo.php?num=' + num));}
+
+function photo(num,Site){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?num=' + num + '&site=' + Site));}
 	
 function refuser(num) {writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_refuser_point_confirm.php?num=' + num + '&t_choix=' + T + '&site=' + Site));}
+
+
 
 function record_ok(num){
 var types = document.getElementById("Types").value;
