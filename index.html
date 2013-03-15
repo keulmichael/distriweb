@@ -65,7 +65,7 @@ else{
 file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_modif_donnees_reelle.php?num='+num+'&site='+site+'&Types='+types+'&nouvelle_quantite_reelle='+quantite_reelle+'&nouvelle_quantite_retours='+quantite_retours+'&nouvelle_horaire_debut='+horaire_debut+'&nouvelle_horaire_debut='+horaire_debut+'&PDA_Latitude=&PDA_Longitude=&presenceGD='+presenceGD);
 }
 document.getElementById('loader').innerHTML="<img src='http://www.distriweb.mobi/metro/paris/mobile/phonegap/loader.gif'>";
-self.setTimeout("self.location.href = 'http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php?t_choix=" + T + "&action=commencer';", 3000) ;
+self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php?t_choix=" + T + "&action=commencer'));", 3000) ;
 }
 }
 
