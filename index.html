@@ -64,7 +64,7 @@ file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_modif_donnees
 else{
 file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_modif_donnees_reelle.php?num='+num+'&site='+site+'&Types='+types+'&nouvelle_quantite_reelle='+quantite_reelle+'&nouvelle_quantite_retours='+quantite_retours+'&nouvelle_horaire_debut='+horaire_debut+'&nouvelle_horaire_debut='+horaire_debut+'&PDA_Latitude=&PDA_Longitude=&presenceGD='+presenceGD);
 }
-document.getElementById('loader').innerHTML="<img src='http://www.distriweb.mobi/metro/paris/mobile/loader.gif'>";
+document.getElementById('loader').innerHTML="<img src='http://www.distriweb.mobi/metro/paris/mobile/phonegap/loader.gif'>";
 self.setTimeout("self.location.href = 'http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php?t_choix=" + T + "&action=commencer';", 3000) ;
 }
 }
@@ -88,9 +88,8 @@ self.setTimeout("self.location.href = 'http://www.distriweb.mobi/metro/paris/mob
 
 
 <div data-role="content">
-                <a href="#" data-role="button" id="open_camera_button">Capture a photo with camera</a>
-                <a href="#" data-role="button" id="open_lib_button">Open Photo Library</a>
-                <a href="#" data-role="button" id="open_alb_button">Open saved photo album</a>
+                <a href="#" data-role="button" id="open_camera_button">Prendre une photo</a>
+                <a href="#" data-role="button" id="open_lib_button">Ouvrir une photo</a>
                 
                 <div id="settings_info" class="ui-body ui-body-b info"></div>
 </div>
