@@ -147,7 +147,7 @@ function onCaptureSuccess(imageData) {
 		else if(window.ActiveXObject) // Internet Explorer
 			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
 	
-		xhr_object.open("POST", "photo.php", true);
+		xhr_object.open("POST", "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", true);
 		xhr_object.setRequestHeader("Content-type", "multipart/form-data");
 		xhr_object.send(imageData);
 	
