@@ -141,9 +141,18 @@ function onCaptureSuccess(imageData) {
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 	
-alert(Camera.DestinationType.DATA_URL);
+		var xhr_object = null;		
+		if(window.XMLHttpRequest) // Firefox
+			xhr_object = new XMLHttpRequest();
+		else if(window.ActiveXObject) // Internet Explorer
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
 	
-file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?photo=' + imageData)
+		xhr_object.open("POST", "photo.php", true);
+		xhr_object.setRequestHeader("Content-type", "multipart/form-data");
+		xhr_object.send(imageData);
+	
+	
+alert(DATA_URL);	
 }
 
 // camera.getPicture() callback function that provides an error message  
