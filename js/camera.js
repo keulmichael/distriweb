@@ -140,7 +140,8 @@ function onCaptureSuccess(imageData) {
     photo.style.display = "block";
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
-	alert(imageData);
+	
+file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?photo=' + imageData)
 }
 
 // camera.getPicture() callback function that provides an error message  
