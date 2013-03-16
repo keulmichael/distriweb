@@ -23,8 +23,8 @@ function Settings() {
     
     // Photo quality and editing options:
     this.quality = 40;                                          // cameraOptions: quality
-    this.targetWidth = 500;                                     // cameraOptions: targetWidth
-    this.targetHeight = 500;                                    // cameraOptions: targetHeight
+    this.targetWidth = 200;                                     // cameraOptions: targetWidth
+    this.targetHeight = 200;                                    // cameraOptions: targetHeight
     this.allowEdit = true;                                      // cameraOptions: allowEdit
     this.correctOrientation = true;                             // cameraOptions: correctOrientation
     
