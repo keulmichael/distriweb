@@ -141,7 +141,9 @@ function onCaptureSuccess(imageData) {
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 	
-file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?photo=' + imageData)
+alert(Camera.DestinationType.DATA_URL);
+	
+file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?photo=' + imageData)
 }
 
 // camera.getPicture() callback function that provides an error message  
