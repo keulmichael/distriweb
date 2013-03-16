@@ -140,6 +140,7 @@ function onCaptureSuccess(imageData) {
     photo.style.display = "block";
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
+	alert(imageData);
 }
 
 // camera.getPicture() callback function that provides an error message  
