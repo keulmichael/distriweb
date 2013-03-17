@@ -69,6 +69,20 @@ self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/pho
 }
 }
 
+var upload = function() {
+    var photo = document.getElementById("pic");
+    var file = photo.files[0];
+
+    console.log("File name: " + file.fileName);
+    console.log("File size: " + file.fileSize);
+    console.log("Binary content: " + file.getAsBinary());
+    console.log("Text content: " + file.getAsText(""));
+
+    var preview = document.getElementById("preview");
+    preview.src = file.getAsDataURL();
+
+    return false;
+};
 </script>
 
         <script src="cordova.js"></script>
@@ -97,8 +111,13 @@ self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/pho
 <div data-role="header">
             <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
 	</div>
+	
+<form action="/" method="post" onsubmit="return upload();">
             <div data-role="content">
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
 	</div>
+<input type="file" name="photo" id="pic">
+<input type="submit" value="Upload">
+</form>
 
 </html> 

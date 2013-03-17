@@ -141,27 +141,7 @@ function onCaptureSuccess(imageData) {
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 
-generateBoundary: function() {
-    return "AJAX-----------------------" + (new Date).getTime();
-}
-    var boundary = this.generateBoundary();
-    var xhr = new XMLHttpRequest;
 
-    xhr.open("POST",  "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            alert(xhr.responseText);
-        }
-    };
-    var contentType = "multipart/form-data; boundary=" + boundary;
-    xhr.setRequestHeader("Content-Type", contentType);
-
-  //  for (var header in this.headers) {
-  //      xhr.setRequestHeader(header, headers[header]);
-  //  }
-	
-    var data = this.buildMessage(imageData, boundary);
-    xhr.sendAsBinary(data);
 }
 
 // camera.getPicture() callback function that provides an error message  
