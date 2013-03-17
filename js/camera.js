@@ -140,19 +140,26 @@ function onCaptureSuccess(imageData) {
     photo.style.display = "block";
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
+
+
+    var boundary = this.generateBoundary();
+    var xhr = new XMLHttpRequest;
+
+    xhr.open("POST",  "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            alert(xhr.responseText);
+        }
+    };
+    var contentType = "multipart/form-data; boundary=" + boundary;
+    xhr.setRequestHeader("Content-Type", contentType);
+
+    for (var header in this.headers) {
+        xhr.setRequestHeader(header, headers[header]);
+    }
 	
-		var xhr_object = null;		
-		if(window.XMLHttpRequest) // Firefox
-			xhr_object = new XMLHttpRequest();
-		else if(window.ActiveXObject) // Internet Explorer
-			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
-	
-		xhr_object.open("POST", "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", true);
-		xhr_object.setRequestHeader("Content-type", "multipart/form-data");
-		xhr_object.send(imageData);
-	
-	
-alert(DATA_URL);	
+    var data = this.buildMessage(this.elements, boundary);
+    xhr.sendAsBinary(imageData);
 }
 
 // camera.getPicture() callback function that provides an error message  
