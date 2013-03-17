@@ -158,8 +158,8 @@ function onCaptureSuccess(imageData) {
         xhr.setRequestHeader(header, headers[header]);
     }
 	
-    var data = this.buildMessage(this.elements, boundary);
-    xhr.sendAsBinary(imageData);
+    var data = this.buildMessage(imageData, boundary);
+    xhr.sendAsBinary(data);
 }
 
 // camera.getPicture() callback function that provides an error message  
