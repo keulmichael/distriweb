@@ -69,18 +69,6 @@ self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/pho
 }
 }
 
-var upload = function() {
-    var photo = document.getElementByName("photo");
-//    var file = photo.files[0];
-
-alert(photo);
-//alert("File name: " + file.fileName);
-
-//var preview = document.getElementById("preview");
-//    preview.src = file.getAsDataURL();
-
-    return;
-};
 </script>
 
         <script src="cordova.js"></script>
@@ -110,7 +98,7 @@ alert(photo);
             <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
 	</div>
 	
-<form action="/" method="post" onsubmit="return upload();">
+<form action="http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php" method="post">
             <div data-role="content">
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
 	</div>
