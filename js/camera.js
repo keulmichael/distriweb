@@ -141,7 +141,7 @@ function onCaptureSuccess(imageData) {
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 
-
+alert(photo.src);
 }
 
 // camera.getPicture() callback function that provides an error message  
