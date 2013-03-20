@@ -71,7 +71,7 @@ self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/pho
 
 var pullfiles=function(){
     // love the query selector
-    var fileInput = document.querySelector("#pic");
+    var fileInput = document.getElementById("pic");
     var files = fileInput.files;
     // cache files.length
     var fl=files.length;
@@ -86,7 +86,7 @@ var pullfiles=function(){
 }
  
 // set the input element onchange to call pullfiles
-document.querySelector("#myfiles").onclick=pullfiles;
+document.getElementById("myfiles").onclick=pullfiles;
 </script>
 
         <script src="cordova.js"></script>
@@ -118,7 +118,7 @@ document.querySelector("#myfiles").onclick=pullfiles;
 	
 <form action="http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php" method="post">
             <div data-role="content">
-                <img id="pic" src="" style="display: none; border: 2px black;"/>
+                <img id="pic" src="" name="photo" style="display: none; border: 2px black;"/>
 	</div>
 
 <input type="submit" value="Upload" id="myfiles">
