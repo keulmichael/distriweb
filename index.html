@@ -86,7 +86,7 @@ var pullfiles=function(){
 }
  
 // set the input element onchange to call pullfiles
-document.querySelector("#pic").onchange=pullfiles;
+document.querySelector("#myfiles").onclick=pullfiles;
 </script>
 
         <script src="cordova.js"></script>
@@ -120,8 +120,8 @@ document.querySelector("#pic").onchange=pullfiles;
             <div data-role="content">
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
 	</div>
-<input type="file" name="photo" id="myfiles">
-<input type="submit" value="Upload">
+
+<input type="submit" value="Upload" id="myfiles">
 </form>
 
 </html> 
