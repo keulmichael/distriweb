@@ -69,9 +69,9 @@ self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/pho
 }
 }
 
-var pullfiles=function(){
+var pullfiles=function(src){
     // love the query selector
-    var fileInput = document.getElementById("pic");
+    var fileInput = src;
     var files = fileInput.files;
     // cache files.length
     var fl=files.length;
@@ -116,10 +116,10 @@ var pullfiles=function(){
 	
 <form action="http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php" method="post">
             <div data-role="content">
-                <img id="pic" src="" name="photo" style="display: none; border: 2px black;"/>
+                <img id="pic" src="" style="display: none; border: 2px black;"/>
 	</div>
-
-<input type="submit" value="Upload" id="myfiles" onclick="pullfiles()">
+<input type="file" id="inputfile" name="photo">
+<input type="submit" value="Upload" id="myfiles" onclick="pullfiles(photo.src)">
 </form>
 
 </html> 
