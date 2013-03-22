@@ -102,11 +102,12 @@ var pullfiles=function(src){
 <div id='total'></div>
 
 
-
+<form action="http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php" method="post">
 <div data-role="content">
-                <a href="#" data-role="button" id="open_camera_button">Prendre une photo</a>
+                <a href="#" data-role="button" id="open_camera_button" name="photo">Prendre une photo</a>
                 <a href="#" data-role="button" id="open_lib_button">Ouvrir une photo</a>
-                
+<input type="submit" value="Upload" id="myfiles" >
+</form>                
                 <div id="settings_info" class="ui-body ui-body-b info"></div>
 </div>
 
@@ -114,12 +115,11 @@ var pullfiles=function(src){
             <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
 	</div>
 	
-<form action="http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php" method="post">
+
             <div data-role="content">
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
 	</div>
-<input type="file" id="inputfile" name="photo">
-<input type="submit" value="Upload" id="myfiles" onclick="pullfiles(photo.src)">
-</form>
+
+
 
 </html> 
