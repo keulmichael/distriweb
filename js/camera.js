@@ -147,7 +147,7 @@ function onCaptureSuccess(imageData) {
           filename : opt.image_uri
         },
         type: "post",
-	name:"photo";
+	name :"photo";
         success : function(data) {
           //sample
         }
