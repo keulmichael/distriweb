@@ -140,6 +140,22 @@ function onCaptureSuccess(imageData) {
     photo.style.display = "block";
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
+	
+	
+
+	    var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+
+            var params = new Object();
+            params.value1 = "photo";
+            params.value2 = "photo";
+
+            options.params = params;
+
+            var ft = new FileTransfer();
+            ft.upload(imageURI, "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", win, fail, options);
 
 }
 
