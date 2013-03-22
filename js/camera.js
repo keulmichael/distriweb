@@ -149,7 +149,7 @@ function onCaptureSuccess(imageData) {
 
 
             var ft = new FileTransfer();
-            ft.upload(imageURI, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), win, fail, options);
+            ft.upload(imageURI, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), options);
 alert(imageURI);
 }
 
