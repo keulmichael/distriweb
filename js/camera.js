@@ -133,6 +133,16 @@ function onCapture(e) {
                                                                   });
 }
 
+ function win(r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Réponse = " + r.response);
+            console.log("Envoyé = " + r.bytesSent);
+        }
+
+ function fail(error) {
+            alert("Une erreur est survenue : Code = " = error.code);
+        }
+
 // Shows photo captured by camera.getPicture()
 function onCaptureSuccess(imageData) {
     
@@ -149,8 +159,7 @@ function onCaptureSuccess(imageData) {
 
 
             var ft = new FileTransfer();
-            ft.upload(imageURI, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), options);
-alert(imageURI);
+            ft.upload(imageURI, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"),  win, fail, options);
 }
 
 // camera.getPicture() callback function that provides an error message  
