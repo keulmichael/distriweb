@@ -145,12 +145,11 @@ function onCaptureSuccess(imageData) {
 
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
-            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
             options.mimeType="image/jpeg";
 
 
             var ft = new FileTransfer();
-            ft.upload(photo.src, "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", win, fail, options);
+            ft.upload(imageURI, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), win, fail, options);
 alert(imageURI);
 }
 
