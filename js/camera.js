@@ -150,8 +150,8 @@ function onCaptureSuccess(imageData) {
 
 
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", win, fail, options);
-
+            ft.upload(photo.src, "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php", win, fail, options);
+alert(imageURI);
 }
 
 // camera.getPicture() callback function that provides an error message  
