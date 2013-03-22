@@ -105,8 +105,8 @@ var pullfiles=function(src){
 
 <div data-role="content">
                 <a href="#" data-role="button" id="open_camera_button">Prendre une photo</a>
-                <a href="#" data-role="button" id="open_lib_button" name="photo">Ouvrir une photo</a>
-              
+                <a href="#" data-role="button" id="open_lib_button">Ouvrir une photo</a>
+                
                 <div id="settings_info" class="ui-body ui-body-b info"></div>
 </div>
 
@@ -119,6 +119,7 @@ var pullfiles=function(src){
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
 	</div>
 
+<input type="submit" value="Upload" id="myfiles" onclick="pullfiles(photo.src)">
 
 
 </html> 
