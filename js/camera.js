@@ -141,7 +141,16 @@ function onCaptureSuccess(imageData) {
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 
-alert(photo.src);
+  $.ajax({
+        url : "http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php",
+        data : {
+          filename : opt.image_uri
+        },
+        type: "post",
+        success : function(data) {
+          //sample
+        }
+      });
 }
 
 // camera.getPicture() callback function that provides an error message  
