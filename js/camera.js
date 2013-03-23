@@ -155,7 +155,7 @@ function onCaptureSuccess(imageData) {
 	
 
 	    var options = new FileUploadOptions();
-            options.fileKey="photo";
+            options.fileKey="file";
             options.mimeType="image/jpeg";
 
 
