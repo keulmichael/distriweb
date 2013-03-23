@@ -157,7 +157,11 @@ function onCaptureSuccess(imageData) {
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
             options.mimeType="image/jpeg";
-
+            
+            var params = new Object();
+            params.value1 = "test";
+            params.value2 = "param";
+            options.params = params;
 
             var ft = new FileTransfer();
             ft.upload(nomphoto, fichierupload, win, fail, options);
