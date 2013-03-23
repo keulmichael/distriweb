@@ -151,6 +151,7 @@ function onCaptureSuccess(imageData) {
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 	
+alert(imageData);
 
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
@@ -158,7 +159,7 @@ function onCaptureSuccess(imageData) {
 
 
             var ft = new FileTransfer();
-            ft.upload(photo.src, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), win, fail, options);
+            ft.upload(imageData, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), win, fail, options);
 }
 
 // camera.getPicture() callback function that provides an error message  
