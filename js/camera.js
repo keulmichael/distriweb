@@ -134,9 +134,9 @@ function onCapture(e) {
 }
 
  function win(r) {
-            console.log("Code = " + r.responseCode);
-            console.log("Réponse = " + r.response);
-            console.log("Envoyé = " + r.bytesSent);
+            alert("Code = " + r.responseCode);
+            alert("Réponse = " + r.response);
+            alert("Envoyé = " + r.bytesSent);
         }
 
  function fail(error) {
