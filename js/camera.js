@@ -160,7 +160,7 @@ alert(photo.src);
 
 
             var ft = new FileTransfer();
-            ft.upload(photo.src, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), options);
+            ft.upload(FILE_URI, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), win, fail, options);
 }
 
 // camera.getPicture() callback function that provides an error message  
