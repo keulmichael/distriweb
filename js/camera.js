@@ -146,7 +146,7 @@ function onCapture(e) {
 // Shows photo captured by camera.getPicture()
 function onCaptureSuccess(imageData) {
     
-    var nomphoto = encodeURI("/sdcard/DCIM/Camera/1364026068548.jpg");
+    var nomphoto = "/sdcard/DCIM/Camera/1364026068548.jpg";
     var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php")
     var photo = getElement("pic");
     photo.style.display = "block";
