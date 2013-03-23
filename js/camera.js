@@ -146,12 +146,13 @@ function onCapture(e) {
 // Shows photo captured by camera.getPicture()
 function onCaptureSuccess(imageData) {
     
+    var nomphoto = encodeURI("/sdcard/DCIM/Camera/1364026068548.jpg");
+    var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php")
     var photo = getElement("pic");
     photo.style.display = "block";
     photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
 	
-alert(imageData);
 
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
@@ -159,7 +160,7 @@ alert(imageData);
 
 
             var ft = new FileTransfer();
-            ft.upload(imageData, encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php"), win, fail, options);
+            ft.upload(nomphoto, fichierupload, win, fail, options);
 }
 
 // camera.getPicture() callback function that provides an error message  
