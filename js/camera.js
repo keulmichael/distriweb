@@ -150,7 +150,7 @@ function onCaptureSuccess(imageData) {
     var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php")
     var photo = getElement("pic");
     photo.style.display = "block";
-    photo.src = imageData;
+    photo.src = nomphoto;
     $.mobile.changePage("#result_page", "slideup");
 	
 
