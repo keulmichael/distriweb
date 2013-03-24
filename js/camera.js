@@ -146,7 +146,7 @@ function onCapture(e) {
 // Shows photo captured by camera.getPicture()
 function onCaptureSuccess(imageData) {
     
-    var nomphoto = encodeURI("/sdcard/DCIM/Camera/1364026068548.jpg");
+    var nomphoto = "/sdcard/DCIM/Camera/1364026068548.jpg";
     var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?site=Marcel Sembat")
     var photo = getElement("pic");
     photo.style.display = "block";
@@ -156,6 +156,7 @@ function onCaptureSuccess(imageData) {
 
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
+            options.fileName=nomphoto.substr(nomphoto.lastIndexOf('/')+1);
             options.mimeType="image/jpeg";
             
             var params = new Object();
