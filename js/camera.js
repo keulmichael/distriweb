@@ -143,8 +143,8 @@ function onCapture(e) {
 // Shows photo captured by camera.getPicture()
 function onCaptureSuccess(imageData) {
     
-
-    var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php")
+var num = document.getElementById("num").value;
+    var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?num="+num)
     var photo = getElement("pic");
     photo.style.display = "block";
     photo.src = imageData;
