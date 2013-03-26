@@ -136,6 +136,7 @@ function onCapture(e) {
  function win(r) {
             alert("Code = " + r.responseCode + " /Envoyé = " + r.bytesSent);
             alert("Réponse = " + r.response);
+            alert(fileName);
         }
 
  function fail(error) {
@@ -156,7 +157,8 @@ function onCaptureSuccess(imageData) {
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
             options.fileName=nomphoto.substr(nomphoto.lastIndexOf('/')+1);
-            options.mimeType="image/jpg";
+            options.mimeType="image/jpeg";
+            options.chunkedMode = false;
             
             var params = new Object();
             params.value1 = "test";
