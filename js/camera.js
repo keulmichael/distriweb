@@ -156,7 +156,7 @@ function onCaptureSuccess(imageData) {
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
             options.fileName=nomphoto.substr(nomphoto.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
+            options.mimeType="image/jpg";
             
             var params = new Object();
             params.value1 = "test";
