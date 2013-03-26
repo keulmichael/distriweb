@@ -134,9 +134,6 @@ function onCapture(e) {
 }
 
  function win(r) {
-            alert("Code = " + r.responseCode + " /Envoyé = " + r.bytesSent);
-            alert("Réponse = " + r.response);
-            alert(fileName);
         }
 
  function fail(error) {
@@ -146,13 +143,13 @@ function onCapture(e) {
 // Shows photo captured by camera.getPicture()
 function onCaptureSuccess(imageData) {
     
-    var nomphoto = "/sdcard/DCIM/Camera/20120530_183749.jpg";
-    var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?site=Marcel Sembat")
+
+    var fichierupload = encodeURI("http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php")
     var photo = getElement("pic");
     photo.style.display = "block";
-    photo.src = nomphoto;
+    photo.src = imageData;
     $.mobile.changePage("#result_page", "slideup");
-	
+    var nomphoto = photo.src;	
 
 	    var options = new FileUploadOptions();
             options.fileKey="photo";
