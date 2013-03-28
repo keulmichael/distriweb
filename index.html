@@ -90,7 +90,13 @@ var pullfiles=function(src){
         i++;
     }   
 }
- 
+
+function bascule()
+{
+etat=document.getElementById('total').style.display;
+if(etat=="none"){document.getElementById('open_camera_button').style.visibility="visible";}
+else{document.getElementById('open_camera_button').style.visibility="hidden";}
+}
 </script>
 
         <script src="cordova.js"></script>
@@ -102,7 +108,7 @@ var pullfiles=function(src){
         <link rel="stylesheet" href="css/camera.css" type="text/css">
 </head>
 
-<body onload="writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php'));onLoad()">
+<body onload="writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php'));onLoad();bascule()">
 </body>
 
 <div id='total'></div>
@@ -116,7 +122,7 @@ var pullfiles=function(src){
 </div>
 
 <div data-role="header">
-            <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
+  //    <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
 	</div>
 	
 
