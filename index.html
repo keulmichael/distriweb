@@ -4,6 +4,9 @@
 <script type="text/javascript">
 function writediv(texte)
      {document.getElementById('total').innerHTML = texte;}
+     
+function writedivCamera(texte)
+     {document.getElementById('camera').innerHTML = texte;}
 
 function file(fichier)
      {
@@ -33,10 +36,12 @@ var tournee = document.getElementById("T").value;writediv(file("http://www.distr
 function voir_point(num,tournee) {
 writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?num=" + num + "&tournee=" + tournee));}
 
-function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/affich_photo.php?num=' + num));}
+function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/affich_photo.php?num=' + num));
+	document.getElementById('open_camera_button').style.visibility="visible";}
 
-function photo(num,Site){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?num=' + num + '&site=' + Site));}
-	
+function photo(num,Site){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?num=' + num + '&site=' + Site));
+	document.getElementById('open_camera_button').style.visibility="visible";}
+
 function refuser(num) {writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_refuser_point_confirm.php?num=' + num + '&t_choix=' + T + '&site=' + Site));}
 
 function record_ok(num){
@@ -46,7 +51,8 @@ var Site = document.getElementById("Site").value;
 var T = document.getElementById("T").value;
 var retours = document.getElementById("quantite_retours").value;
 
-writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point_ok.php?num=' + num + '&Types=' + Types + '&Quantite_prevue=' + Quantite_prevue + '&t_choix=' + T + '&site=' + Site + '&retours=' + retours));}
+writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point_ok.php?num=' + num + '&Types=' + Types + '&Quantite_prevue=' + Quantite_prevue + '&t_choix=' + T + '&site=' + Site + '&retours=' + retours));
+document.getElementById('open_camera_button').style.visibility="visible";}
 
 function mobile_modif_donnees_reelle(num){
 var site = document.getElementById("site").value;
@@ -59,11 +65,11 @@ var T = document.getElementById("T").value;
 
 if (quantite_reelle==0 && types!='PRINT'){
 writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_refuser_point_confirm.php?t_choix=' + T +'&num='+num));
-} 
+}
 
-else { 
+else {
 if (navigator.geolocation && types=='SNCF' || navigator.geolocation && types=='Vinci' || navigator.geolocation && types=='PRINT'){
-navigator.geolocation.getCurrentPosition(function(position) { 
+navigator.geolocation.getCurrentPosition(function(position) {
 file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_modif_donnees_reelle.php?num='+num+'&site='+site+'&Types='+types+'&nouvelle_quantite_reelle='+quantite_reelle+'&nouvelle_quantite_retours='+quantite_retours+'&nouvelle_horaire_debut='+horaire_debut+'&nouvelle_horaire_debut='+horaire_debut+'&PDA_Latitude='+position.coords.latitude+'&PDA_Longitude='+position.coords.longitude+'&presenceGD='+presenceGD),{maximumAge:0, timeout:0}})
 }
 
@@ -88,14 +94,13 @@ var pullfiles=function(src){
         var file = files[i];
         alert(file.name);
         i++;
-    }   
+    }
 }
 
 function bascule()
 {
 etat=document.getElementById('total').style.visibility;
-if(etat=="hidden"){document.getElementById('open_camera_button').style.visibility="visible";}
-else{document.getElementById('open_camera_button').style.visibility="hidden";}
+document.getElementById('open_camera_button').style.visibility="hidden";
 }
 </script>
 
@@ -104,7 +109,7 @@ else{document.getElementById('open_camera_button').style.visibility="hidden";}
         <script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
         <script type="text/javascript" src="js/camera.js"></script>
         
-        <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css"> 
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css">
         <link rel="stylesheet" href="css/camera.css" type="text/css">
 </head>
 
@@ -122,13 +127,13 @@ else{document.getElementById('open_camera_button').style.visibility="hidden";}
 </div>
 
 <div data-role="header">
-  //    <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
-	</div>
-	
+  // <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
+</div>
+
 
             <div data-role="content">
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
-	</div>
+</div>
 
 
 
