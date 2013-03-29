@@ -34,13 +34,12 @@ function retourCommencer() {
 var tournee = document.getElementById("T").value;writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php?t_choix=" + tournee + "&action=commencer"));}
 
 function voir_point(num,tournee) {
-writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?num=" + num + "&tournee=" + tournee));}
-
-function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/affich_photo.php?num=' + num));
+writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?num=" + num + "&tournee=" + tournee));
 	document.getElementById('open_camera_button').style.visibility="visible";}
 
-function photo(num,Site){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?num=' + num + '&site=' + Site));
-	document.getElementById('open_camera_button').style.visibility="visible";}
+function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/affich_photo.php?num=' + num));}
+
+function photo(num,Site){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/photo.php?num=' + num + '&site=' + Site));}
 
 function refuser(num) {writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_refuser_point_confirm.php?num=' + num + '&t_choix=' + T + '&site=' + Site));}
 
@@ -51,8 +50,7 @@ var Site = document.getElementById("Site").value;
 var T = document.getElementById("T").value;
 var retours = document.getElementById("quantite_retours").value;
 
-writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point_ok.php?num=' + num + '&Types=' + Types + '&Quantite_prevue=' + Quantite_prevue + '&t_choix=' + T + '&site=' + Site + '&retours=' + retours));
-document.getElementById('open_camera_button').style.visibility="visible";}
+writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point_ok.php?num=' + num + '&Types=' + Types + '&Quantite_prevue=' + Quantite_prevue + '&t_choix=' + T + '&site=' + Site + '&retours=' + retours));}
 
 function mobile_modif_donnees_reelle(num){
 var site = document.getElementById("site").value;
@@ -126,9 +124,9 @@ document.getElementById('open_camera_button').style.visibility="hidden";
                 <div id="settings_info" class="ui-body ui-body-b info"></div>
 </div>
 
-<div data-role="header">
+//<div data-role="header">
   // <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Retour</a>
-</div>
+//</div>
 
 
             <div data-role="content">
