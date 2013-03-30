@@ -36,7 +36,8 @@ document.getElementById('pic').style.visibility="hidden";}
 
 function voir_point(num,tournee) {
 writediv(file("http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_record_point.php?num=" + num + "&tournee=" + tournee));
-	document.getElementById('open_camera_button').style.visibility="visible";}
+document.getElementById('open_camera_button').style.visibility="visible";
+document.getElementById('pic').style.visibility="visible";}
 
 function affich_photo(num){writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/affich_photo.php?num=' + num));}
 
@@ -78,6 +79,7 @@ file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/mobile_modif_donnees
 document.getElementById('loader').innerHTML="<img src='http://www.distriweb.mobi/metro/paris/mobile/phonegap/loader.gif'>";
 self.setTimeout("writediv(file('http://www.distriweb.mobi/metro/paris/mobile/phonegap/index.php?t_choix=" + T + "&action=commencer'));", 3000) ;
 document.getElementById('pic').style.visibility="hidden";
+document.getElementById('open_camera_button').style.visibility="hidden";
 }
 }
 
